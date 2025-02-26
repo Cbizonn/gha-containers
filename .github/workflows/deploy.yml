@@ -11,6 +11,11 @@ jobs:
   test:
     environment: testing
     runs-on: ubuntu-latest
+    container:
+      image: node:16
+      # env: 
+      #   MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      #   MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.7flot.mongodb.net
